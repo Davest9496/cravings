@@ -1,0 +1,87 @@
+.footer {
+  background-color: $color-grey-dark;
+  font-size: 1.4rem;
+  color: $color-grey-light;
+  padding: 10rem 0;
+
+  &__logo {
+    display: block;
+    text-align: center;
+
+    &-image {
+      text-align: center;
+      width: 12rem;
+    }
+
+    &-text {
+      color: $color-dark;
+      text-transform: uppercase;
+      font-weight: 900;
+      font-size: 2.1rem;
+      letter-spacing: 3px;
+    }
+  }
+
+  &__navigation {
+    border-top: 1px solid $color-primary-medium;
+    display: inline-block;
+    padding-top: 2.5rem;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      color: $color-grey-light;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      word-spacing: 2px;
+      transition: transform 0.3s;
+      display: inline-block;
+    }
+
+    &:hover,
+    &:active {
+      color: $color-dark;
+      transform: translateY(-0.5rem) scale(1.2);
+    }
+  }
+
+  &__copyright {
+    border-top: 1px solid $color-primary-medium;
+    padding-top: 2.5rem;
+    width: 80%;
+    float: right;
+
+    &-link {
+      margin: 0 2px;
+
+      &:link,
+      &:visited {
+        color: $color-dark;;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: transform 0.3s;
+        display: inline-block;
+        transition: all .2s;
+      }
+
+      &:hover,
+      &:active {
+        transform: translateY(-3px);
+      }
+    }
+  }
+}

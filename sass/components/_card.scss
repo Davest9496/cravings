@@ -1,0 +1,179 @@
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 52rem;
+
+  &__side {
+    height: 52rem;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba($color-primary-dark, 0.15);
+    transition: all 1s ease;
+
+    &--front {
+      background-color: $color-primary-light;
+    }
+
+    &--back {
+      transform: rotateY(180deg);
+
+      &-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-blue-light,
+          $color-blue-dark
+        );
+      }
+
+      &-2 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-light,
+          $color-dark
+        );
+      }
+
+      &-3 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-green-light,
+          $color-green-dark
+        );
+      }
+    }
+  }
+
+  &__photo {
+    background-size: cover;
+    height: 23rem;
+    // background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+    &--1 {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba($color-blue-light, .2),
+          rgba($color-blue-dark, .2)
+        ),
+        url(../images/stew-peas.png);
+    }
+
+    &--2 {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba($color-light, .2),
+          rgba($color-dark, .2)
+        ),url(../images/tikka.png);
+    }
+
+    &--3 {
+       background-image: linear-gradient(
+          to right bottom,
+          rgba($color-green-light, .2),
+          rgba($color-green-dark, .2)
+        ), url(../images/beef.jpg);
+    }
+  }
+
+  &__heading {
+    font-size: 2.6rem;
+    font-weight: 300;
+    text-align: right;
+    text-transform: uppercase;
+    color: $color-primary-light;
+    position: absolute;
+    top: 16rem;
+    right: 1rem;
+    width: 75%;
+  }
+
+  &__heading-span {
+    padding: .4rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+
+    &-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba($color-blue-light, .85),
+          rgba($color-blue-dark, .85)
+        )
+    }
+
+     &-2 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba($color-light, .85),
+          rgba($color-dark, .85)
+        )
+    }
+
+     &-3 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba($color-green-light, .85),
+          rgba($color-green-dark, .85)
+        )
+    }
+  }
+
+  &__details {
+    padding: 3rem;
+    ul {
+        list-style: none;
+        text-transform: capitalize;
+        width: 80%;
+        margin: 0 auto;
+        
+        li {
+            text-align: center;
+            font-size: 1.5rem;
+            padding: 1rem;
+
+            &:not(:last-child) {
+                border-bottom: 1px solid $color-grey-medium;
+            }
+        }
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+
+  &__cta {
+    text-align: center;
+    position: absolute;
+    width: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__price-box {
+    // text-align: center;
+    color: $color-primary-light;
+    margin-bottom: 8rem;
+  }
+
+  &__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
+
+  &__price-value {
+    font-size: $font-xxl;
+    font-weight: 100;
+  }
+}
