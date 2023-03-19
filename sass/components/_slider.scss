@@ -6,6 +6,10 @@
 
   overflow: hidden;
 
+  @include respond(tab-port) {
+        margin-top: 5rem;
+    }
+
   &__btn {
   position: absolute;
   top: 50%;

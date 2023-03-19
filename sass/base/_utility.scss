@@ -8,10 +8,18 @@
 
 .u-margin-btm-md {
   margin-bottom: 5rem;
+
+  @include respond(tab-port) {
+        margin-bottom: 3rem !important;
+    }
 }
 
 .u-margin-btm-lg {
   margin-bottom: 8rem;
+
+  @include respond(tab-port) {
+        margin-bottom: 5rem !important;
+    }
 }
 
 .u-margin-top-lg {

@@ -11,6 +11,11 @@
         margin-left: 2rem;
 
         animation: moveInLeft 1.5s ease-out;
+
+        @include respond(phone) {
+            letter-spacing: 1rem;
+            margin-left: 5px;
+        }
     }
 
     &-sub {
@@ -19,6 +24,10 @@
         letter-spacing: .85rem;
 
         animation: moveInRight 1.5s ease-out;
+
+        @include respond(phone) {
+            letter-spacing: .1rem;
+        }
     }
 }
 
@@ -37,6 +46,14 @@
     -webkit-background-clip: text;
     background-clip: text;
     transition: all .2s;
+
+    @include respond(tab-port) {
+        font-size: 3rem;
+    }
+
+    @include respond(phone) {
+        font-size: 2.5rem;
+    }
 
     &:hover {
         transform: skewY(-2deg) skewX(-15deg) scale(1.1);

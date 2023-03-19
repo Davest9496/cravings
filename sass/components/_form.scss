@@ -16,6 +16,10 @@
     display: block;
     transition: all 0.3s;
 
+    @include respond(tab-port) {
+            width: 100%;
+        }
+
     &::-webkit-input-placeholder {
       color: rgba($color-secondary-medium, 0.8);
     }
@@ -50,6 +54,11 @@
     width: 45%;
     float: left;
     margin-bottom: 8rem;
+
+    @include respond(tab-port) {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
   }
 
   &__radio-input {

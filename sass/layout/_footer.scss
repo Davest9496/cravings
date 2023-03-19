@@ -4,9 +4,17 @@
   color: $color-grey-light;
   padding: 10rem 0;
 
+  @include respond(tab-port) {
+    padding: 8rem 0;
+  }
+
   &__logo {
     display: block;
     text-align: center;
+
+    @include respond(tab-port) {
+            margin-bottom: 6rem;
+        }
 
     &-image {
       text-align: center;
@@ -26,6 +34,12 @@
     border-top: 1px solid $color-primary-medium;
     display: inline-block;
     padding-top: 2.5rem;
+
+       @include respond(tab-port) {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 10rem;
+        }
   }
 
   &__list {
@@ -65,17 +79,23 @@
     width: 80%;
     float: right;
 
+    @include respond(tab-port) {
+            width: 100%;
+            float: none;
+            text-align: center;
+        }
+
     &-link {
       margin: 0 2px;
 
       &:link,
       &:visited {
-        color: $color-dark;;
+        color: $color-dark;
         text-decoration: none;
         text-transform: uppercase;
         transition: transform 0.3s;
         display: inline-block;
-        transition: all .2s;
+        transition: all 0.2s;
       }
 
       &:hover,
